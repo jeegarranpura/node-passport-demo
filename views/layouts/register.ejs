@@ -1,0 +1,51 @@
+
+<div class="register">
+    <span class="fas fa-user-circle"></span>
+    <strong>Create account!</strong>
+    
+    <form action="/user/register" method="post" class="register-form">
+        <fieldset>
+            <div class="form">
+                <%- include ("../partials/massege") %>
+                <div class="form-row">
+                    <span class="fas fa-user"></span>
+                    <label class="form-label" for="input">Name</label>
+                    <input type="text" name="name" class="form-text" placeholder="Name" 
+                    value="<%= typeof name !== 'undefined' ? name :''%>">
+                </div>
+                <div class="form-row">
+                    <span class="fas fa-envelope"></span>
+                    <label class="form-label" for="input">E-mail</label>
+                    <input type="email" name="email" class="form-text" placeholder="Email" 
+                    value=" <%= typeof email != 'undefined' ? email : '' %> "/>
+                </div>
+                <div class="form-row">
+                    <span class="fas fa-lock"></span>
+                    <label class="form-label" for="input">Password</label>
+                    <input type="password" name="password" placeholder="Password"  class="form-text"
+                    value="<%= typeof password !== 'undefined' ? password:''%>">
+                </div>
+                <div class="form-row">
+                    <span class="fas fa-lock"></span>
+                    <label class="form-label" for="input">Confirm Password</label>
+                    <input type="password" name="password2" class="form-text" placeholder="Confirm Password"
+                    value="<%= typeof password2 !== 'undefined' ? password2:''%>">
+                </div>
+                <div class="form-row button-login">
+                    <button class="btn btn-login">Submit <span
+                            class="fas fa-arrow-right"></span></button>
+                </div>
+                <a href="/user/login" class="create-account">Alrady Account!</a>
+            </div>
+           
+        </fieldset>
+        </form>
+
+        <span class="create-account">Or create account using social media!</span>
+
+        <div class="social-media">
+            <a href="#facebook" class="fb"><span class="fab fa-facebook"></span></a>
+            <a href="#twitter" class="tw"><span class="fab fa-twitter"></span></a>
+            <a href="#pinterest" class="pi"><span class="fab fa-pinterest"></span></a>
+        </div>
+</div>
